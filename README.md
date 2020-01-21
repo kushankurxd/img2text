@@ -1,6 +1,6 @@
 # ml_text_recognition
 
-A new Flutter application.
+A new Flutter application that converts text in image into readable text using Firebase ML Kit.
 
 ## Getting Started
 
