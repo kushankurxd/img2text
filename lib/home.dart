@@ -1,3 +1,4 @@
+import 'dart:io'
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:ml_text_recognition/ml.dart';
@@ -17,9 +18,11 @@ class _homePageState extends State<HomePage>{
     var tempFile = await ImagePicker.pickImage(
       source: source,
     );
+    
+    var imageFile = File(tempFile.path);
 
     if(tempFile != null){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => MLPage(tempFile)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => MLPage(imageFile)));
     }
   }
 
